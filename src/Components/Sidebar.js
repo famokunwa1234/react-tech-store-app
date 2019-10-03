@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Link } from "react-router-dom";
 import {ProductConsumer} from "../Context";
 
-export default function Sidebar() {
+export default function Sidebar() {        
     return (
         <ProductConsumer>
            {value => {
@@ -11,7 +11,7 @@ export default function Sidebar() {
                return ( 
                <SideWrapper show={sidebarOpen}>
                 <ul>
-                {links.map(link => {
+                {links.map(link => {  
                 return (
                     <li key={link.id}>
                 <Link to={link.path}

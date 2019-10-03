@@ -1,9 +1,18 @@
 import React from 'react'
-import {ProductConsumer} from "../Context";
+//mport {ProductConsumer} from "../Context";
+import Hero from "../Components/Hero";
+import {Link} from "react-router-dom";
+import Services from "../Components/HomePage/Services";
+import Featured from "../Components/HomePage/Featured";
+
 export default function HomePage() {
-    return (
+    return (  
         <>
-           <h1>hello from the home page</h1> 
+     <Hero title="awesome Gadgets" max="true">
+         <Link className="main-link" to="/Product"  style={{marg: "2rem" }}>Our Product</Link>
+     </Hero>
+     <Services />
+     <Featured />
         </>
     )
 }
